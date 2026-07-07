@@ -3,52 +3,47 @@ import { slot4BrandConfig } from '@/editable/theme/brand.config'
 export const globalContent = {
   site: {
     name: slot4BrandConfig.siteName,
-    tagline: slot4BrandConfig.tagline || 'Independent reading platform',
+    tagline: slot4BrandConfig.tagline || 'A quiet reference library',
     domain: slot4BrandConfig.domain,
     baseUrl: slot4BrandConfig.baseUrl,
   },
   nav: {
-    tagline: 'Independent reading platform',
+    tagline: 'A quiet reference library',
+    // Navbar renders no task links per the spec. This kept for compatibility.
     primaryLinks: [
-      { label: 'Articles', href: '/articles' },
-      { label: 'Visuals', href: '/image-sharing' },
-      { label: 'Listings', href: '/listings' },
+      { label: 'About', href: '/about' },
       { label: 'Contact', href: '/contact' },
     ],
     actions: {
-      primary: { label: 'Start exploring', href: '/' },
-      secondary: { label: 'Submit', href: '/contact' },
+      primary: { label: 'Browse the library', href: '/pdf' },
+      secondary: { label: 'Contribute', href: '/create' },
     },
   },
   footer: {
-    tagline: 'Stories, resources, and discoverable posts',
-    description: 'A connected publishing surface for articles, visuals, listings, profiles, bookmarks, and downloadable resources.',
+    tagline: 'Field studies and slow reference.',
+    description: 'A small, slow-built reference library. Studies, briefs, and long documents kept in one place — read what is here, take what you need.',
     columns: [
       {
-        title: 'Explore',
-        links: [
-          { label: 'Articles', href: '/articles' },
-          { label: 'Listings', href: '/listings' },
-          { label: 'Images', href: '/image-sharing' },
-          { label: 'PDF Library', href: '/pdf' },
-        ],
+        title: 'Library',
+        // Only the Reference Library appears in footer discovery.
+        links: [{ label: 'Reference Library', href: '/pdf' }],
       },
       {
-        title: 'Site',
+        title: 'About',
         links: [
-          { label: 'About', href: '/about' },
-          { label: 'Contact', href: '/contact' },
+          { label: 'The project', href: '/about' },
+          { label: 'Get in touch', href: '/contact' },
         ],
       },
     ],
-    bottomNote: 'Built for clean discovery and connected publishing.',
+    bottomNote: 'Made deliberately, kept quiet.',
   },
   commonLabels: {
-    readMore: 'Read more',
-    viewAll: 'View all',
+    readMore: 'Keep reading',
+    viewAll: 'See the whole shelf',
     explore: 'Explore',
-    latest: 'Latest',
-    related: 'Related',
-    published: 'Published',
+    latest: 'New to the shelf',
+    related: 'Adjacent reading',
+    published: 'Filed',
   },
 } as const
