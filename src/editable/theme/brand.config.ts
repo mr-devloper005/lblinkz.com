@@ -5,6 +5,8 @@ import { getProductKind } from '@/design/factory/get-product-kind'
 const { recipe } = getFactoryState()
 const productKind = getProductKind(recipe)
 
+// Fabian-inspired warm editorial palette: ivory canvas, deep espresso ink,
+// soft olive accent. Serif display, sans body.
 export const slot4BrandConfig = {
   siteName: siteIdentity.name,
   tagline: siteIdentity.tagline,
@@ -13,7 +15,7 @@ export const slot4BrandConfig = {
   productKind,
   ogImage: siteIdentity.ogImage,
   accents: {
-    primary: '#d32323',
-    surface: '#ffffff',
+    primary: '#6f7d40',
+    surface: '#f5f1e9',
   },
 } as const
